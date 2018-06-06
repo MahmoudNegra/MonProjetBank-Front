@@ -26,7 +26,9 @@ const mesRoutes = [
     NavbarComponent,
     FooterComponent,
     CompteListComponent,
-    ComptesAddComponent
+    ComptesAddComponent,
+    WelcomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
