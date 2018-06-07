@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { ComptesAddComponent } from './components/comptes-add/comptes-add.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
+import { ComptesDeleteComponent } from './components/comptes-delete/comptes-delete.component';
 
 
 const mesRoutes = [
@@ -17,6 +19,7 @@ const mesRoutes = [
   {path: 'list', component: CompteListComponent},
   {path: 'add', component: ComptesAddComponent},
   {path: 'welcome', component: WelcomeComponent},
+  {path: 'delete/:id', component: ComptesDeleteComponent},
   {path: '', redirectTo: '/welcome', pathMatch: 'full' },
   {path: '**', component: NotFoundComponent},
 ];
@@ -28,11 +31,13 @@ const mesRoutes = [
     CompteListComponent,
     ComptesAddComponent,
     WelcomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ComptesDeleteComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(mesRoutes)
   ],
   providers: [],
